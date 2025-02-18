@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(18, 18, 18);">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav style="height: 50px;">
+        <div style="display: flex;">
+            <div style="margin-left: 80%;">
+                <a href="#About">About</a>
+            </div>
+            <div style="margin-left: 10px;">
+                <a href="#projects">Projects</a>
+            </div>
+        </div>
+    </nav>
+    <div class="body">
+    <section>
+        <div style="color: white; margin-top: 300px;">
+            Hello, i´m Tobias 
+        </div>
+        <div style="color: white;">
+            Thanks for visiting. Welcome to my porfolio!
+        </div>
+        <div>
+            <button>hire me</button>
+            <button>Download cv</button>
+        </div>
+
+    </section>
+    <section class="text-white" id="About">
+        <div class="about_aboutSection__rcdYX md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+            <img alt="About image" loading="lazy" width="550" height="550" decoding="async" data-nimg="1" src="escritorio.png">
+            <div class="h-full flex flex-col text-left mt-4">
+                <h2 class="text-4xl font-bold text-white mt-7 mb-4">About me</h2>
+                <p>
+                    Fui responsable del desarrollo completo y parcial de varios 
+                    proyectos en .NET, tanto en frontend como en backend, 
+                    además de gestionar la base de datos. En estos proyectos, 
+                    muchos de los cuales fueron implementados exitosamente
+                     y utilizados por clientes, mantuve una comunicación 
+                    constante con los mismos para entender sus necesidades, 
+                    realizar ajustes y asegurar su satisfacción en cada fase. Este 
+                    enfoque permitió entregar soluciones de alta calidad, 
+                    adaptadas a sus requerimientos.
+                     Además de mi trabajo técnico, también desempeñé un papel 
+                    activo en el reclutamiento y selección de nuevos empleados,
+                     contribuyendo al crecimiento del equipo y asegurando que 
+                    contara con talento adecuado para los proyectos en curso.
+                </p>
+                <div class="flex flex-row justify-start mt-6">
+                    <button onclick="showSkillsInfo(); increaseBarritaWidth()">
+                        <p class="mr-3 font-semibold text-white text-[#ADB7BE]">Skills</p>
+                        <div class="h-1 bg-primary-500 mt-2 mr-3" style="width: calc(100% - 0.75rem);" id="barritaSkills"></div>
+                    </button>
+                    <button onclick="showEducationInfo()">
+                        <p class="mr-3 font-semibold text-white text-[#ADB7BE]">Education</p>
+                        <div class="h-1 bg-primary-500 mt-2 mr-3" style="width: 0px" id="barritaEducation"></div>
+                    </button>
+                    <button>
+                        <p class="mr-3 font-semibold text-white text-[#ADB7BE]">Certifications</p>
+                        <div class="h-1 bg-primary-500 mt-2 mr-3" id="barritaCertifications" style="width: 0px"></div>
+                    </button>
+                </div>
+                <div class="mt-4" id="skills">
+                    <ul class="list-disc pl-2 text-justify">
+                        <li>Frontend: HTML, JavaScript</li>
+                        <li>Backend: C# .NET (Framework, LinQ, ASP.NET)</li>
+                        <li>Base de Datos: SQL</li>
+                        <li> Otros Lenguajes: C++, Java</li>
+                    </ul>
+                </div>
+                <div class="mt-4" style="display: none;" id="education">
+                    <ul class="list-disc pl-2 text-justify">
+                        <li>Actualmente, estoy en la etapa final de mi carrera en la Universidad Tecnológica Nacional (UTN).</li>
+                        <li>También estoy estudiando inglés en el Torcuato English Center</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <video width="600" controls>
+            <source src="../video.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section id="projects">
+
+    </section>
+</div>
+</body>
+</html>
+<script>
+    
+    function showSkillsInfo(){
+        document.getElementById("skills").style.display = "block";
+        document.getElementById("education").style.display = "none";
+
+        document.getElementById("barritaEducation").style.width = "0px";
+        document.getElementById("barritaCertifications").style.width = "0px";
+        document.getElementById("barritaSkills").style.width = "calc(100% - 0.75rem)";
+
+
+    }
+    
+    function showEducationInfo(){
+         document.getElementById("education").style.display = "block"; 
+         document.getElementById("skills").style.display = "none"; 
+
+         document.getElementById("barritaSkills").style.width = "0px";
+         document.getElementById("barritaEducation").style.width = "calc(100% - 0.75rem)";
+         document.getElementById("barritaCertifications").style.width = "0px";
+    }
+
+
+    function increaseBarritaWidth(){
+      //  let barrita = document.getElementById("barritaSkills");
+      //  let currentWidth = 0;
+      //  let maxWidth = 100;
+      //  let step = 1;
+      //  let interval = setInterval(() => {
+      //      if(currentWidth >= maxWidth){
+      //          clearInterval(interval)
+      //      } else {
+      //          currentWidth += step
+      //          barrita.style.width = `calc(100% - 0.75rem + ${currentWidth}%)`
+      //      }
+      //      
+      //  }, 1)
+    }
+
+
+</script>
